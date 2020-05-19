@@ -27,19 +27,11 @@ def escape_html(word):
     return escape(word)
 
 PM_START_TEXT = """
-Hello *{}* My name is *Sabrina*!
+Hey *{}* , My Name Is *NoobNomous* - I'm Here To Help You Manage *Your* *Groups* . Hit /help To Find Out More About How To Use *My* *Full* *Potential* *Use!*  
 
-I'm here to manage your groups! 
+Made With Love By [This Awesome Person](https://t.me/NoobNomous) . 
 
-Click Help button to find out more about how to use me to my full potential. 
-
-Join Support Chat ( @SabrinaChat ) if you need any support or help 
-
-Join ( @SabrinaOfficial ) if you want to keep up with the news, updates and bot downtime!
-
-Made by @TechnoAyanOfficial
-
-Want me to help you? [Click Here!](https://t.me/MissSabrina_bot?startgroup=true)
+Special Thanks To [This Person](https://t.me/Unknown_Hacker_X) . 
 """
 
 
@@ -47,7 +39,7 @@ Want me to help you? [Click Here!](https://t.me/MissSabrina_bot?startgroup=true)
 
 HELP_STRINGS = """
 
-Hello! my name *{}*.
+Hello! my name *NoobNomous* .
 
 *Main* available commands:
  - /start: Start the bot...
@@ -61,7 +53,7 @@ Hello! my name *{}*.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
 
-DONATE_STRING = """Hey you can Donate to [Ayan Ansari](t.me/TechnoAyanOfficial) for better server """
+DONATE_STRING = """No Donations Sorry. """
 
 
 IMPORTED = {}
@@ -153,7 +145,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Yo, I'm alive👩")
+        update.effective_message.reply_text("Yup!I'm Alive.PM Me If You Have Any Questions On How To Use Me!")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -168,11 +160,11 @@ def send_start(bot, update):
     text = PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID, parse_mode=ParseMode.MARKDOWN)
                 
     keyboard = [[
-        InlineKeyboardButton(text=tld(chat.id, '🥳Add To Group'),
-                             url="https://t.me/MissSabrina_bot?startgroup=true"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")
+        InlineKeyboardButton(text=tld(chat.id, 'Support Group'),
+                             url="https://t.me/Sabrina_RoBotChat"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")
         ]]
     keyboard += [[
-        InlineKeyboardButton(text=tld(chat.id, '👥 Support Group'), url="https://t.me/SabrinaChat")
+        InlineKeyboardButton(text=tld(chat.id, 'Add Me To UR Groups'), url="http://telegram.me/NoobNomousBot?startgroup=botstart")
     ]]
 
     update.effective_message.reply_text(
